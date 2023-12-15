@@ -75,6 +75,8 @@
   {% if i.author == request.user %}
 	<span><a href="{%url 'edit' i.id %}">edit</a></span>
 	<span><a href="{%url 'delete' i.id %}">delete</a></span>
+  {% else %}
+  You cannot edit news
   {%endif%}
    <span>{{i.author}}</span>
   <hr>
