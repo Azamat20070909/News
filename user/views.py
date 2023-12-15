@@ -55,7 +55,7 @@ def like(request, id):
 			if request.user in l.user.all():
 				l.user.remove(request.user)
 				return redirect('home')
-			i.user.add(request.user)
+			l.user.add(request.user)
 			return redirect('home')
 
 		like = Like.objects.create(
